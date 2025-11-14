@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * 首页营销服务
+ */
 @Service
-public class IndexGroupBuyMarketServiceServiceImpl implements IIndexGroupBuyMarketService {
+public class IndexGroupBuyMarketServiceImpl implements IIndexGroupBuyMarketService {
 
     @Resource
     private DefaultActivityStrategyFactory defaultActivityStrategyFactory;
