@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 试算结果实体对象（给用户展示拼团可获得的优惠信息）
- */
+/** *  试算结果实体对象（给用户展示拼团可获得的优惠信息） */
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,8 +22,10 @@ public class TrialBalanceEntity {
     private String goodsName;
     /** 原始价格 */
     private BigDecimal originalPrice;
-    /** 折扣金额 */
+    // 折扣金额
     private BigDecimal deductionPrice;
+    // 支付金额
+    private BigDecimal payPrice;
     /** 拼团目标数量 */
     private Integer targetCount;
     /** 拼团开始时间 */

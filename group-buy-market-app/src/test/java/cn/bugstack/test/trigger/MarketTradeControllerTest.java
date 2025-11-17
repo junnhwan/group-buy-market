@@ -14,9 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
-/**
- * 营销交易服务
- */
+/** *  营销交易服务 */
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -28,7 +26,7 @@ public class MarketTradeControllerTest {
     @Test
     public void test_lockMarketPayOrder() {
         LockMarketPayOrderRequestDTO lockMarketPayOrderRequestDTO = new LockMarketPayOrderRequestDTO();
-        lockMarketPayOrderRequestDTO.setUserId("xiaofuge");
+        lockMarketPayOrderRequestDTO.setUserId("xfg02");
         lockMarketPayOrderRequestDTO.setTeamId(null);
         lockMarketPayOrderRequestDTO.setActivityId(100123L);
         lockMarketPayOrderRequestDTO.setGoodsId("9890001");
@@ -45,7 +43,7 @@ public class MarketTradeControllerTest {
     public void test_lockMarketPayOrder_teamId_not_null() {
         LockMarketPayOrderRequestDTO lockMarketPayOrderRequestDTO = new LockMarketPayOrderRequestDTO();
         lockMarketPayOrderRequestDTO.setUserId("xiaofuge");
-        lockMarketPayOrderRequestDTO.setTeamId("71810249");
+        lockMarketPayOrderRequestDTO.setTeamId("33063446");
         lockMarketPayOrderRequestDTO.setActivityId(100123L);
         lockMarketPayOrderRequestDTO.setGoodsId("9890001");
         lockMarketPayOrderRequestDTO.setSource("s01");

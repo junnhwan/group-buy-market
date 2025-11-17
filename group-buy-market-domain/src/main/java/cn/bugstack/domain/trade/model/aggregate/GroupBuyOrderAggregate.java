@@ -8,9 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 拼团订单聚合对象；聚合可以理解用各个四肢、身体、头等组装出来一个人
- */
+/** *  拼团订单聚合对象；聚合可以理解用各个四肢、身体、头等组装出来一个人 */
 @Data
 @Builder
 @AllArgsConstructor
@@ -23,5 +21,7 @@ public class GroupBuyOrderAggregate {
     private PayActivityEntity payActivityEntity;
     /** 支付优惠实体对象 */
     private PayDiscountEntity payDiscountEntity;
+    /** 已参与拼团量 */
+    private Integer userTakeOrderCount;
 
 }

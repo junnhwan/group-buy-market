@@ -13,33 +13,33 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-/**
- * 正常结束节点
- */
+/** *  正常结束节点 */
 @Slf4j
 @Service
 public class EndNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> {
 
     @Override
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
-        // 打日志
         log.info("拼团商品查询试算服务-EndNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
 
-        // 上下文取出异步查询的数据
         // 拼团活动配置
         GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = dynamicContext.getGroupBuyActivityDiscountVO();
+
         // 商品信息
         SkuVO skuVO = dynamicContext.getSkuVO();
 
-        // 上下文中获取营销节点计算的折扣价格
+        // 折扣金额
         BigDecimal deductionPrice = dynamicContext.getDeductionPrice();
+        // 支付金额
+        BigDecimal payPrice = dynamicContext.getPayPrice();
 
-        // 封装此前异步查询的数据，封装成返回数据的类对象，这里先测试返回空结果
+        // 返回空结果
         return TrialBalanceEntity.builder()
                 .goodsId(skuVO.getGoodsId())
                 .goodsName(skuVO.getGoodsName())
                 .originalPrice(skuVO.getOriginalPrice())
                 .deductionPrice(deductionPrice)
+                .payPrice(payPrice)
                 .targetCount(groupBuyActivityDiscountVO.getTarget())
                 .startTime(groupBuyActivityDiscountVO.getStartTime())
                 .endTime(groupBuyActivityDiscountVO.getEndTime())
@@ -53,4 +53,5 @@ public class EndNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, 
     public StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> get(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return defaultStrategyHandler;
     }
+
 }

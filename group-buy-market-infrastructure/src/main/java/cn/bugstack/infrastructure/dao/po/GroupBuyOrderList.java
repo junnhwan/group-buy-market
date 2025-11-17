@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 用户拼单明细
- */
+/** *  用户拼单明细 */
 @Data
 @Builder
 @AllArgsConstructor
@@ -45,6 +43,8 @@ public class GroupBuyOrderList {
     private Integer status;
     /** 外部交易单号-确保外部调用唯一幂等 */
     private String outTradeNo;
+    /** 唯一业务ID */
+    private String bizId;
     /** 创建时间 */
     private Date createTime;
     /** 更新时间 */

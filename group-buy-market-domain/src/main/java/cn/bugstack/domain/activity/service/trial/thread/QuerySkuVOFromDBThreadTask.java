@@ -8,13 +8,13 @@ import java.util.concurrent.Callable;
 /**
  * 查询商品信息任务
  */
-public class QuerySkuFromDBThreadTask implements Callable<SkuVO> {
+public class QuerySkuVOFromDBThreadTask implements Callable<SkuVO> {
     // 商品id
     private final String goodsId;
     // 活动仓储
     private final IActivityRepository repository;
 
-    public QuerySkuFromDBThreadTask(String goodsId, IActivityRepository repository) {
+    public QuerySkuVOFromDBThreadTask(String goodsId, IActivityRepository repository) {
         this.goodsId = goodsId;
         this.repository = repository;
     }

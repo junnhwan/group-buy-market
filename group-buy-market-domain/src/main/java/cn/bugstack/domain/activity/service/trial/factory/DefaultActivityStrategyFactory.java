@@ -14,9 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-/**
- * 活动策略工厂
- */
+/** *  活动策略工厂 */
 @Service
 public class DefaultActivityStrategyFactory {
 
@@ -32,15 +30,17 @@ public class DefaultActivityStrategyFactory {
 
     @Data
     @Builder
-    @NoArgsConstructor
     @AllArgsConstructor
+    @NoArgsConstructor
     public static class DynamicContext {
         // 拼团活动营销配置值对象
         private GroupBuyActivityDiscountVO groupBuyActivityDiscountVO;
         // 商品信息
         private SkuVO skuVO;
-        // 折扣后价格
+        // 折扣金额
         private BigDecimal deductionPrice;
+        // 支付金额
+        private BigDecimal payPrice;
         // 活动可见性限制
         private boolean visible;
         // 活动

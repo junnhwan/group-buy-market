@@ -8,7 +8,7 @@ import cn.bugstack.domain.activity.service.discount.IDiscountCalculateService;
 import cn.bugstack.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.bugstack.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.bugstack.domain.activity.service.trial.thread.QueryGroupBuyActivityDiscountVOThreadTask;
-import cn.bugstack.domain.activity.service.trial.thread.QuerySkuFromDBThreadTask;
+import cn.bugstack.domain.activity.service.trial.thread.QuerySkuVOFromDBThreadTask;
 import cn.bugstack.types.design.framework.tree.StrategyHandler;
 import cn.bugstack.types.enums.ResponseCode;
 import cn.bugstack.types.exception.AppException;
@@ -21,22 +21,22 @@ import java.math.BigDecimal;
 import java.util.Map;
 import java.util.concurrent.*;
 
-/**
- * 营销优惠节点
- */
+/** *  营销优惠节点 */
 @Slf4j
 @Service
 public class MarketNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> {
 
     @Resource
     private ThreadPoolExecutor threadPoolExecutor;
-    @Resource
-    private EndNode endNode;
-    @Resource
-    private ErrorNode errorNode;
-
+    /**
+     * <a href="https://bugstack.cn/md/road-map/spring-dependency-injection.html">Spring 注入详细说明</a>
+     */
     @Resource
     private Map<String, IDiscountCalculateService> discountCalculateServiceMap;
+    @Resource
+    private ErrorNode errorNode;
+    @Resource
+    private TagNode tagNode;
 
     @Override
     protected void multiThread(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws ExecutionException, InterruptedException, TimeoutException {
@@ -46,16 +46,14 @@ public class MarketNode extends AbstractGroupBuyMarketSupport<MarketProductEntit
         threadPoolExecutor.execute(groupBuyActivityDiscountVOFutureTask);
 
         // 异步查询商品信息 - 在实际生产中，商品有同步库或者调用接口查询。这里暂时使用DB方式查询。
-        QuerySkuFromDBThreadTask querySkuFromDBThreadTask = new QuerySkuFromDBThreadTask(requestParameter.getGoodsId(), repository);
-        FutureTask<SkuVO> skuVOFutureTask = new FutureTask<>(querySkuFromDBThreadTask);
+        QuerySkuVOFromDBThreadTask querySkuVOFromDBThreadTask = new QuerySkuVOFromDBThreadTask(requestParameter.getGoodsId(), repository);
+        FutureTask<SkuVO> skuVOFutureTask = new FutureTask<>(querySkuVOFromDBThreadTask);
         threadPoolExecutor.execute(skuVOFutureTask);
 
-        // 获取异步任务结果（阻塞等待，直到任务完成或超时）
         // 写入上下文 - 对于一些复杂场景，获取数据的操作，有时候会在下N个节点获取，这样前置查询数据，可以提高接口响应效率
         dynamicContext.setGroupBuyActivityDiscountVO(groupBuyActivityDiscountVOFutureTask.get(timeout, TimeUnit.MINUTES));
         dynamicContext.setSkuVO(skuVOFutureTask.get(timeout, TimeUnit.MINUTES));
 
-        // 打日志
         log.info("拼团商品查询试算服务-MarketNode userId:{} 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成", requestParameter.getUserId());
     }
 
@@ -76,15 +74,16 @@ public class MarketNode extends AbstractGroupBuyMarketSupport<MarketProductEntit
         }
 
         // 优惠试算
-        IDiscountCalculateService iDiscountCalculateService = discountCalculateServiceMap.get(groupBuyDiscount.getMarketPlan());
-        if(iDiscountCalculateService == null) {
+        IDiscountCalculateService discountCalculateService = discountCalculateServiceMap.get(groupBuyDiscount.getMarketPlan());
+        if (null == discountCalculateService) {
             log.info("不存在{}类型的折扣计算服务，支持类型为:{}", groupBuyDiscount.getMarketPlan(), JSON.toJSONString(discountCalculateServiceMap.keySet()));
             throw new AppException(ResponseCode.E0001.getCode(), ResponseCode.E0001.getInfo());
         }
 
-        // 拼团优惠试算
-        BigDecimal deductionPrice = iDiscountCalculateService.calculate(requestParameter.getUserId(), skuVO.getOriginalPrice(), groupBuyDiscount);
-        dynamicContext.setDeductionPrice(deductionPrice);
+        // 折扣价格
+        BigDecimal payPrice = discountCalculateService.calculate(requestParameter.getUserId(), skuVO.getOriginalPrice(), groupBuyDiscount);
+        dynamicContext.setDeductionPrice(skuVO.getOriginalPrice().subtract(payPrice));
+        dynamicContext.setPayPrice(payPrice);
 
         return router(requestParameter, dynamicContext);
     }
@@ -96,6 +95,7 @@ public class MarketNode extends AbstractGroupBuyMarketSupport<MarketProductEntit
             return errorNode;
         }
 
-        return endNode;
+        return tagNode;
     }
+
 }

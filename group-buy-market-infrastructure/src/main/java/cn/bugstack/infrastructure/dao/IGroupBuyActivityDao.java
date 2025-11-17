@@ -5,9 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-/**
- * 拼团活动Dao
- */
+/** *  拼团活动Dao */
 @Mapper
 public interface IGroupBuyActivityDao {
 
@@ -16,5 +14,7 @@ public interface IGroupBuyActivityDao {
     GroupBuyActivity queryValidGroupBuyActivity(GroupBuyActivity groupBuyActivityReq);
 
     GroupBuyActivity queryValidGroupBuyActivityId(Long activityId);
+
+    GroupBuyActivity queryGroupBuyActivityByActivityId(Long activityId);
 
 }
