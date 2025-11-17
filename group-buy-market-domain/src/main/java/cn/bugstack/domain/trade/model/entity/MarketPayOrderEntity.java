@@ -8,15 +8,15 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-/**
- * 拼团，预购订单营销实体对象
- */
+/** *  拼团，预购订单营销实体对象 */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class MarketPayOrderEntity {
 
+    /** 拼单组队ID */
+    private String teamId;
     /** 预购订单ID */
     private String orderId;
     /** 折扣金额 */
