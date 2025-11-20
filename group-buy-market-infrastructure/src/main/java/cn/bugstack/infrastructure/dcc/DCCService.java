@@ -1,7 +1,11 @@
 package cn.bugstack.infrastructure.dcc;
 
 import cn.bugstack.types.annotations.DCCValue;
+import cn.bugstack.types.common.Constants;
 import org.springframework.stereotype.Service;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 动态配置服务
@@ -18,6 +22,9 @@ public class DCCService {
     @DCCValue("cutRange:100")
     private String cutRange;
 
+    @DCCValue("scBlacklist:s02c02")
+    private String scBlacklist;
+
     public boolean isDowngradeSwitch() {
         return "1".equals(downgradeSwitch);
     }
@@ -32,5 +39,14 @@ public class DCCService {
         // 判断是否在切量范围内
         return lastTwoDigits <= Integer.parseInt(cutRange);
     }
+
+    /**
+     * 判断黑名单拦截渠道，true 拦截、false 放行
+     */
+    public boolean isSCBlackIntercept(String source, String channel) {
+        List<String> list = Arrays.asList(scBlacklist.split(Constants.SPLIT));
+        return list.contains(source + channel);
+    }
+
 
 }
