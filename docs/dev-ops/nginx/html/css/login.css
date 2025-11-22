@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    /* 还原图中的淡紫色背景 */
+    background: #d3d3df;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-header h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.form-item {
+    margin-bottom: 25px;
+}
+
+.form-item label {
+    display: none; /* 按照设计图，label 是隐含在 placeholder 或 UI 风格里的，这里隐藏让界面更像原图 */
+}
+
+.form-item input {
+    width: 100%;
+    padding: 14px 15px;
+    font-size: 16px;
+    border: 1px solid #333; /* 原图是比较明显的黑色边框 */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: #333;
+}
+
+.form-item input:focus {
+    border-color: #4ea0e6;
+}
+
+.form-item input::placeholder {
+    color: #999;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #4ea0e6; /* 原图的蓝色 */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+.btn-submit:active {
+    background: #3b8ad1;
+}
+
+.error-message {
+    color: #ff3860;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+}

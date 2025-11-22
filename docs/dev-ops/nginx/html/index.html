@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>小傅哥 - 拼团项目 - 商品详情页</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- 轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 注意：实际项目中请确保 images 目录下有这些图片，或者换成网络图片地址 -->
+            <div class="swiper-slide"><img src="./images/sku-13811216-01.png" alt="商品图1" onerror="this.src='https://bugstack.cn/images/article/product/book/mybatis-03.png?raw=true'"></div>
+            <div class="swiper-slide"><img src="./images/sku-13811216-02.png" alt="商品图2" onerror="this.src='https://bugstack.cn/images/article/product/book/mybatis-03.png?raw=true'"></div>
+            <div class="swiper-slide"><img src="./images/sku-13811216-03.png" alt="商品图3" onerror="this.src='https://bugstack.cn/images/article/product/book/mybatis-03.png?raw=true'"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 商品信息区域 -->
+    <div class="product-section">
+        <div class="product-price-row">
+            <span class="price-symbol">¥</span>
+            <span class="current-price">100</span>
+            <span class="original-price">¥80</span>
+        </div>
+        <h1 class="product-title">手写MyBatis：渐进式源码实践（全彩）</h1>
+
+        <!-- 新增：黄色优惠条 -->
+        <div class="discount-banner">
+            大促优惠 | 直降 ¥60，76人再抢，参与马上抢到
+        </div>
+    </div>
+
+    <!-- 拼单列表 -->
+    <div class="group-section">
+        <div class="section-header">
+            <span class="title">3人在拼单，可直接参与</span>
+            <span class="more">查看更多 ></span>
+        </div>
+
+        <div class="group-list">
+            <!-- 拼单项 1 -->
+            <div class="group-item">
+                <div class="user-wrapper">
+                    <div class="avatar">傅</div>
+                    <span class="username">小傅哥</span>
+                </div>
+                <div class="status-wrapper">
+                    <div class="status-info">
+                        <div class="status-text">还差<span class="highlight">1人</span>拼成</div>
+                        <div class="countdown-timer">剩余 00:05:49</div>
+                    </div>
+                    <button class="group-btn" data-price="40">去拼单</button>
+                </div>
+            </div>
+
+            <!-- 拼单项 2 -->
+            <div class="group-item">
+                <div class="user-wrapper">
+                    <div class="avatar" style="background: #ffd95c;">狗</div>
+                    <span class="username">李二狗</span>
+                </div>
+                <div class="status-wrapper">
+                    <div class="status-info">
+                        <div class="status-text">还差<span class="highlight">1人</span>拼成</div>
+                        <div class="countdown-timer">剩余 00:07:30</div>
+                    </div>
+                    <button class="group-btn" data-price="40">去拼单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部占位，防止内容被底部栏遮挡 -->
+    <div class="bottom-placeholder"></div>
+
+    <!-- 底部操作栏 -->
+    <div class="action-bar">
+        <div class="icon-btns">
+            <div class="icon-btn">
+                <span>🏠</span>
+                <div class="text">首页</div>
+            </div>
+            <div class="icon-btn">
+                <span>❤️</span>
+                <div class="text">收藏</div>
+            </div>
+        </div>
+        <div class="trade-btns">
+            <button class="trade-btn buy-alone" data-price="100">
+                <div class="price">¥100</div>
+                <div class="label">单独购买</div>
+            </button>
+            <button class="trade-btn group-buy" data-price="40">
+                <div class="price">¥40</div>
+                <div class="label">开团购买</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- 支付弹窗 -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-mask"></div>
+        <div class="modal-content">
+            <div class="modal-header">请扫码支付</div>
+            <p id="paymentAmount" class="modal-amount">支付金额：￥40</p>
+
+            <div class="qr-placeholder">
+                <!-- 二维码占位 -->
+                <img src="./images/sku-13811216-04.png" alt="二维码" onerror="this.style.display='none'; this.parentNode.innerText='二维码区域'">
+            </div>
+
+            <div class="modal-actions">
+                <button id="cancelPayment" class="btn-cancel">取消支付</button>
+                <button id="completePayment" class="btn-confirm">支付完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
