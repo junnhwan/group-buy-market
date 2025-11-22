@@ -278,7 +278,8 @@ public interface IRedisService {
             // 将哈希字节数组转换为正整数
             BigInteger bigInt = new BigInteger(1, hashBytes);
             // 取模以确保索引在合理范围内
-            return bigInt.mod(BigInteger.valueOf(Integer.MAX_VALUE)).intValue();
+//            return bigInt.mod(BigInteger.valueOf(Integer.MAX_VALUE)).intValue();
+            return bigInt.mod(BigInteger.valueOf(10000000)).intValue();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("MD5 algorithm not found", e);
         }
