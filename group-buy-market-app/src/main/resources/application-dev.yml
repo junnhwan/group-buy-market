@@ -17,7 +17,8 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://172.25.147.28:3306/group_buy_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+    # url: jdbc:mysql://172.25.147.28:3306/group_buy_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true # 本地WSL
+    url: jdbc:mysql://47.112.180.205:3306/group_buy_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true # 云服务器
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
     pool-name: Retail_HikariCP
@@ -39,7 +40,8 @@ mybatis:
 redis:
   sdk:
     config:
-      host: 172.25.147.28
+      #host: 172.25.147.28  # 本地WSL
+      host: 47.112.180.205 # 云服务器
       port: 6379
       pool-size: 10
       min-idle-size: 5
