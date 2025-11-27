@@ -1,0 +1,212 @@
+25-11-20.13:31:17.807 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on LAPTOP-LUONF1VG with PID 19980 (D:\code\java\group-buy-market\group-buy-market-app\target\classes started by zjh in D:\code\java\group-buy-market)
+25-11-20.13:31:17.808 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-11-20.13:31:18.444 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-11-20.13:31:18.445 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-11-20.13:31:18.482 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+25-11-20.13:31:18.662 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$abf473c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.13:31:18.701 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.13:31:18.825 [main            ] INFO  Version                - Redisson 3.26.0
+25-11-20.13:31:19.337 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.13:31:19.347 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.13:31:19.397 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.13:31:19.572 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-11-20.13:31:19.579 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-11-20.13:31:19.580 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-11-20.13:31:19.580 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-11-20.13:31:19.670 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-11-20.13:31:19.670 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1835 ms
+25-11-20.13:31:20.972 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-11-20.13:31:20.992 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-11-20.13:31:20.999 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-11-20.13:31:21.011 [main            ] INFO  Application            - Started Application in 3.489 seconds (JVM running for 4.2)
+25-11-20.13:31:21.370 [RMI TCP Connection(1)-172.28.109.97] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-11-20.13:31:21.589 [RMI TCP Connection(1)-172.28.109.97] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-11-20.13:31:22.272 [RMI TCP Connection(4)-172.28.109.97] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-11-20.13:31:22.273 [RMI TCP Connection(4)-172.28.109.97] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-11-20.13:31:22.274 [RMI TCP Connection(4)-172.28.109.97] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-11-20.13:31:30.009 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:31:30.106 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:31:45.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:31:45.016 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:32:00.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:32:00.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:32:15.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:32:15.016 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:32:30.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:32:30.004 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:32:45.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:32:45.015 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:33:00.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.13:33:00.016 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.13:33:08.789 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-11-20.13:33:08.806 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-11-20.16:30:43.730 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on LAPTOP-LUONF1VG with PID 15252 (D:\code\java\group-buy-market\group-buy-market-app\target\classes started by zjh in D:\code\java\group-buy-market)
+25-11-20.16:30:43.730 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-11-20.16:30:44.550 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-11-20.16:30:44.553 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-11-20.16:30:44.603 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+25-11-20.16:30:44.855 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$abf473c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:30:44.914 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:30:45.110 [main            ] INFO  Version                - Redisson 3.26.0
+25-11-20.16:30:45.668 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:30:45.679 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:30:45.737 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:30:45.926 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-11-20.16:30:45.933 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-11-20.16:30:45.933 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-11-20.16:30:45.933 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-11-20.16:30:46.023 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-11-20.16:30:46.023 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2265 ms
+25-11-20.16:30:47.434 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-11-20.16:30:47.455 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-11-20.16:30:47.463 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-11-20.16:30:47.476 [main            ] INFO  Application            - Started Application in 4.081 seconds (JVM running for 4.937)
+25-11-20.16:30:48.893 [RMI TCP Connection(4)-172.28.100.172] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-11-20.16:30:48.893 [RMI TCP Connection(4)-172.28.100.172] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-11-20.16:30:48.894 [RMI TCP Connection(4)-172.28.100.172] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-11-20.16:30:49.229 [RMI TCP Connection(5)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-11-20.16:30:49.406 [RMI TCP Connection(5)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-11-20.16:31:00.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:31:00.138 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:31:15.002 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:31:15.005 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:31:30.003 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:31:30.005 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:31:45.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:31:45.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:32:00.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:32:00.012 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:32:15.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:32:15.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:32:30.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:32:30.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:32:45.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:32:45.010 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:33:00.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:33:00.009 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:33:15.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:33:15.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:33:30.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:33:30.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:33:45.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:33:45.012 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:34:00.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:34:00.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:34:15.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:34:15.005 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:34:30.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:34:30.017 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:34:45.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:34:45.012 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:35:00.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:35:00.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:35:15.003 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:35:15.003 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:35:30.018 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:35:30.018 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:35:45.019 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:35:45.019 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:35:46.339 [http-nio-8091-exec-2] INFO  TestApiClientController - 模拟测试第三方服务接收拼团回调 {"outTradeNoList":["343015166836","294030773891","078918121841"],"teamId":"34814934"}
+25-11-20.16:36:00.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:36:00.017 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:36:15.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:36:15.004 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:36:30.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:36:30.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:36:45.019 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:36:45.020 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:36:57.916 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-11-20.16:36:57.940 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-11-20.16:44:47.587 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on LAPTOP-LUONF1VG with PID 10228 (D:\code\java\group-buy-market\group-buy-market-app\target\classes started by zjh in D:\code\java\group-buy-market)
+25-11-20.16:44:47.587 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-11-20.16:44:48.227 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-11-20.16:44:48.227 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-11-20.16:44:48.258 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+25-11-20.16:44:48.446 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$6f10a9ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:44:48.493 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:44:48.635 [main            ] INFO  Version                - Redisson 3.26.0
+25-11-20.16:44:49.168 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:44:49.183 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:44:49.239 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:44:49.382 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-11-20.16:44:49.397 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-11-20.16:44:49.397 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-11-20.16:44:49.397 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-11-20.16:44:49.481 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-11-20.16:44:49.481 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1879 ms
+25-11-20.16:44:50.782 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-11-20.16:44:50.797 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-11-20.16:44:50.813 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-11-20.16:44:50.828 [main            ] INFO  Application            - Started Application in 3.546 seconds (JVM running for 4.3)
+25-11-20.16:44:52.022 [RMI TCP Connection(1)-172.28.100.172] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-11-20.16:44:52.022 [RMI TCP Connection(1)-172.28.100.172] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-11-20.16:44:52.022 [RMI TCP Connection(1)-172.28.100.172] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-11-20.16:44:52.022 [RMI TCP Connection(2)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-11-20.16:44:52.269 [RMI TCP Connection(2)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-11-20.16:45:00.030 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:45:00.209 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:45:15.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:45:15.013 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:45:30.009 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:45:30.009 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:45:45.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:45:45.013 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:45:54.374 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-11-20.16:45:54.390 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-11-20.16:46:27.733 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on LAPTOP-LUONF1VG with PID 7916 (D:\code\java\group-buy-market\group-buy-market-app\target\classes started by zjh in D:\code\java\group-buy-market)
+25-11-20.16:46:27.742 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-11-20.16:46:28.438 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-11-20.16:46:28.439 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-11-20.16:46:28.482 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+25-11-20.16:46:28.672 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$6f10a9ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:46:28.719 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:46:28.865 [main            ] INFO  Version                - Redisson 3.26.0
+25-11-20.16:46:29.460 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:46:29.470 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 172.25.147.28/172.25.147.28:6379
+25-11-20.16:46:29.520 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-11-20.16:46:29.691 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-11-20.16:46:29.698 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-11-20.16:46:29.699 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-11-20.16:46:29.699 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-11-20.16:46:29.785 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-11-20.16:46:29.785 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2016 ms
+25-11-20.16:46:31.122 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-11-20.16:46:31.143 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-11-20.16:46:31.152 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-11-20.16:46:31.164 [main            ] INFO  Application            - Started Application in 3.712 seconds (JVM running for 4.429)
+25-11-20.16:46:31.245 [RMI TCP Connection(3)-172.28.100.172] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-11-20.16:46:31.245 [RMI TCP Connection(3)-172.28.100.172] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-11-20.16:46:31.247 [RMI TCP Connection(3)-172.28.100.172] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-11-20.16:46:32.229 [RMI TCP Connection(6)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-11-20.16:46:32.466 [RMI TCP Connection(6)-172.28.100.172] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-11-20.16:46:45.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:46:45.126 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:47:00.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:47:00.017 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:47:15.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:47:15.009 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:47:30.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:47:30.009 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:47:45.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:47:45.010 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:48:00.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:48:00.018 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:48:15.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:48:15.010 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:48:30.002 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:48:30.002 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:48:45.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:48:45.012 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:49:00.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:49:00.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:49:15.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:49:15.005 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:49:30.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:49:30.017 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:49:42.117 [http-nio-8091-exec-1] INFO  TestApiClientController - 模拟测试第三方服务接收拼团回调 {"outTradeNoList":["859638443844","038984744740","867350195982"],"teamId":"44639736"}
+25-11-20.16:49:45.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:49:45.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:50:00.006 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-11-20.16:50:00.006 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-11-20.16:50:10.289 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-11-20.16:50:10.305 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
