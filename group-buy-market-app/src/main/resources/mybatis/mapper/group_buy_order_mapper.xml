@@ -85,10 +85,17 @@
 
     <select id="queryAllTeamCount" parameterType="java.util.Set" resultType="java.lang.Integer">
         select count(id) from group_buy_order
-        where team_id in
-        <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
-            #{teamId}
-        </foreach>
+        <!-- 非空判断：集合有值才拼接in条件 -->
+        <if test="teamIds != null and teamIds.size() > 0">
+            where team_id in
+            <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
+                #{teamId}
+            </foreach>
+        </if>
+        <!-- 兜底：集合为空时，条件置为1=2，返回0（符合count语义） -->
+        <if test="teamIds == null or teamIds.size() == 0">
+            where 1 = 2
+        </if>
     </select>
 
     <select id="queryAllTeamCompleteCount" parameterType="java.util.Set" resultType="java.lang.Integer">
@@ -109,10 +116,17 @@
 
     <select id="queryAllUserCount" parameterType="java.util.Set" resultType="java.lang.Integer">
         select sum(lock_count) from group_buy_order
-        where team_id in
-        <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
-            #{teamId}
-        </foreach>
+        <!-- 非空判断：集合有值才拼接in条件 -->
+        <if test="teamIds != null and teamIds.size() > 0">
+            where team_id in
+            <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
+                #{teamId}
+            </foreach>
+        </if>
+        <!-- 兜底：集合为空时，条件置为1=2，sum返回null（可根据业务调整为0） -->
+        <if test="teamIds == null or teamIds.size() == 0">
+            where 1 = 2
+        </if>
     </select>
 
 </mapper>
