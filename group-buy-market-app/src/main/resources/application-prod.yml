@@ -53,4 +53,5 @@ redis:
 logging:
   level:
     root: info
+    cn.bugstack.infrastructure.dao: debug
   config: classpath:logback-spring.xml

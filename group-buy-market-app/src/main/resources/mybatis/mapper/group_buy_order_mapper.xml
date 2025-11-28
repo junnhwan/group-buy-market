@@ -93,10 +93,18 @@
 
     <select id="queryAllTeamCompleteCount" parameterType="java.util.Set" resultType="java.lang.Integer">
         select count(id) from group_buy_order
-        where status = 1 and team_id in
-        <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
-            #{teamId}
-        </foreach>
+        where status = 1
+        <!-- 核心：判断teamIds集合非空才拼接in条件 -->
+        <if test="teamIds != null and teamIds.size() > 0">
+            and team_id in
+            <foreach item="teamId" collection="teamIds" open="(" separator="," close=")">
+                #{teamId}
+            </foreach>
+        </if>
+        <!-- 兜底：如果集合为空，直接让条件不成立，返回0（符合count的语义） -->
+        <if test="teamIds == null or teamIds.size() == 0">
+            and 1 = 2
+        </if>
     </select>
 
     <select id="queryAllUserCount" parameterType="java.util.Set" resultType="java.lang.Integer">
